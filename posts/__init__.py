@@ -1,0 +1,1 @@
+defalut_app_config = 'posts.apps.PostsConfig'
