@@ -177,6 +177,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 
 # Default primary key field type
@@ -194,8 +195,8 @@ CKEDITOR_UPLOAD_PATH = "uploads/"
 CKEDITOR_CONFIGS = {
     'default': {
         'toolbar': 'full',
-        'height': 500,
-        'width': 500,
+        'height': 380,
+        'width': 390,
     },
 }
 

@@ -1,11 +1,13 @@
 {% extends 'base.html' %}
 {% load crispy_forms_tags %}
 
+
 {% block content %}
-<div class="col-4 offset-4 mb-5 mt-5">
+<div style="margin-bottom: 10px; margin-left: 5;">
 <h3>Create an articles</h3>
 {{ form.media }}
-	<form method="POST" action="." enctype="multipart/form-data">
+	<form method="POST" action="." enctype="multipart/form-data" 
+		style="margin-left: 9px; margin-right: 13px;">
 		{% csrf_token %}
 		{{ form| crispy }}
 		<button class="btn btn-info" type="submit" >Submit</button>
