@@ -87,11 +87,3 @@ class Post(models.Model):
 		return Comment.objects.filter(post=self).count()
 
 
-class Comment(models.Model):
-	user =  models.ForeignKey(User, on_delete=models.CASCADE)
-	content = models.TextField()
-	timestamp = models.DateTimeField(auto_now_add=True)
-	post = models.ForeignKey(Post, related_name='comments', on_delete=models.CASCADE)
-
-	def __str__(self):
-		return self.user.username
