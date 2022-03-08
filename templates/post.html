@@ -2,8 +2,7 @@
 {% load static %}
 
 {% block content %}
-  <body>
-  
+
     <div class="container">
       <div class="row">
         <!-- Latest Posts -->
@@ -105,4 +104,12 @@
           {% include 'sidebar.html' with most_recent=most_recent category_count=category_count %}
       </div>
     </div>
+    <script type="text/javascript">
+    var loader= document.getElementById('preloader');
+
+    window.addEventListener("load", function(){
+        loader.style.display="none";
+    })
+
+</script>
 {% endblock content %}

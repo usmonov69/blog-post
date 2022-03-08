@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
   {% block content %}
+  <div id="preloader"></div>
     
     <div class="container">
       <div class="row">
@@ -54,6 +55,13 @@
         {% include 'sidebar.html' with most_recent=most_recent category_count=category_count %}
       </div>
     </div>
-   
+    <script type="text/javascript">
+    var loader= document.getElementById('preloader');
+
+    window.addEventListener("load", function(){
+        loader.style.display="none";
+    })
+
+</script> 
 
   {% endblock content %}
